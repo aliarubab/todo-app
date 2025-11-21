@@ -1,0 +1,108 @@
+/* General body styling */
+body {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;     /* center vertically */
+    min-height: 100vh;       /* full viewport height */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f7ff; /* light sky blue background */
+}
+
+/* Main container (centered card) */
+.container {
+    background-color: #ffffff; /* white card */
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* subtle shadow */
+    width: 400px;
+    max-width: 90%; /* responsive */
+    text-align: center;
+}
+
+/* Heading */
+.container h2 {
+    margin-bottom: 20px;
+    color: #1a1a1a; /* dark gray */
+}
+
+/* Input box */
+.inputBox {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.inputBox input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+}
+
+.inputBox button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    background-color: #4a90e2; /* modern blue */
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.inputBox button:hover {
+    background-color: #357ab8; /* slightly darker blue on hover */
+    transform: scale(1.05);
+}
+
+/* Task list */
+#taskList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#taskList li {
+    background-color: #e6f0ff; /* light blue for task item */
+    color: #1a1a1a;            /* dark text */
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+#taskList li:hover {
+    background-color: #d0e3ff; /* slightly darker on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    .inputBox input {
+        font-size: 14px;
+    }
+
+    .inputBox button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    #taskList li {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+}
